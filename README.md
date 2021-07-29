@@ -41,7 +41,7 @@ With this information, the first thing I did was check out the webpage. Navigati
 
 However, this will fail. Next, we can try a bruteforce attack using Hydra. Hydra needs 3 things before it starts to crack - the URL, the type of HTTP request, location of username/password forms. To get these, we first intercept a request to login using any credentials - I used test and test
 
-![](/images/pfsense%20burp%20intercept.png)
+![](/images/4.5%20-%20pfsense%20burp%20intercept.png)
 
 The highlighted text at the bottom we will need so keep a hold of it. First, the URL we need is simply the IP address followed by the request in the HTTP request - in this case, it is simply "/index.php". 
 
