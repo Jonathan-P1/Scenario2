@@ -9,7 +9,7 @@ First things first, I ran a pingsweep scan using Nmap to identify possible targe
 
 ![](/images/1.png)
 
-After knowing our five targets:
+We know have five targets:
 
 * 192.168.22.1
 * 192.168.22.20
@@ -17,3 +17,10 @@ After knowing our five targets:
 * 192.168.22.40
 * 192.168.22.45
 
+With this information we can start scanning each one:
+
+<details><summary>192.168.22.1</summary>
+<p>
+
+</p>
+</details>
