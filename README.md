@@ -25,9 +25,13 @@ The IP of this machine could indicate that it is the router/default gateway of t
 
 ![](/images/2%20pfsense%20allports.png)
 
-Looking at the results, we can gather a few things. First, that it is running DNS - almost confirming suspicions it is the router. It is also running a possible website or web interface on port 80 and another service running on port 2222 called "EtherNetIP-1. Researching port 2222 indicates some results telling us what it could possible be - maybe a remote service of some kind like SSH?
+Looking at the results, we can gather a few things. First, that it is running DNS - almost confirming suspicions it is the router. It is also running a possible website or web interface on port 80 and another service running on port 2222 called "EtherNetIP-1. Researching port 2222 indicates some results telling us what it could possibly be. 
 
 ![](/images/port%202222.png)
+
+Now that we have a number of open ports, a more detailed scan can be run on these three ports only - this is much faster than running it across all ports.
+
+![](/images/3%20pfsense%20servscan.png)
 
 </p>
 </details>
