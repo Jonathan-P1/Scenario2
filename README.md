@@ -65,6 +65,7 @@ This breaks down into the following parts:
     * Worth noting here that the username and password fields have been replaced by ^USER^ and &PASS^ which tells Hydra which parts to replace - ^USER^ gets replaced with admin and ^PASS^ gets replaced with every password in the wordlist we chose
 * Username or Password incorrect" specifies the error message for a failed login - helps Hydra know if the password worked or not. If this message is in the HTTP response, the login failed. If not, the password worked.
 
+We can leave that running and move on to another machine.
 
 </p>
 </details>
