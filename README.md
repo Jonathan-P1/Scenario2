@@ -39,6 +39,33 @@ With this information, the first thing I did was check out the webpage. Navigati
 
 ![](/images/pfsensedefault.png)
 
+However, this will fail. Next, we can try a bruteforce attack using Hydra. Hydra needs 3 things before it starts to crack - the URL, the type of HTTP request, location of username/password forms. To get these, we first intercept a request to login using any credentials - I used test and test
+
+![](/images/pfsense%20burp%20intercept.png)
+
+The highlighted text at the bottom we will need so keep a hold of it. First, the URL we need is simply the IP address followed by the request in the HTTP request - in this case, it is simply "/index.php". 
+
+Next, we need the actual information being sent (the highlighted part) which includes a username field called "usernamefld" and a password field called "passwordfld. Looking carefully, you should see the fake credentials you entered in these fields. 
+
+Finally, we need an error message so Hydra knows if the password hasn't worked. This varies from login page to login page. In this case, the error message is "Username or Password incorrect"
+
+![](/images/incorrect.png)
+
+Putting these parts all together in the Hydra command should look like the following:
+
+![](/images/pfsense%20bruteforce.png)
+
+This breaks down into the following parts:
+
+* hydra -l admin specifies the username to use as "admin"
+* -P /usr/share/wordlists/rockyou.txt specifies the wordlist to use
+* http-post-form specifies the HTTP method this request uses - as found in Burp Suite titled "POST"
+* "/index.php is the login page itself
+* __csrf_magic...login=Login - this long string indicates the actual data being sent
+    * Worth noting here that the username and password fields have been replaced by ^USER^ and &PASS^ which tells Hydra which parts to replace - ^USER^ gets replaced with admin and ^PASS^ gets replaced with every password in the wordlist we chose
+* Username or Password incorrect" specifies the error message for a failed login - helps Hydra know if the password worked or not. If this message is in the HTTP response, the login failed. If not, the password worked.
+
+
 </p>
 </details>
 
