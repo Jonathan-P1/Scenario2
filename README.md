@@ -33,6 +33,12 @@ Now that we have a number of open ports, a more detailed scan can be run on thes
 
 ![](/images/3%20pfsense%20servscan.png)
 
+This reveals some much more interesting information. It tells us that "lighttpd 1.4.35" is running on port 80 and that port 2222 is actually running SSH (away from the default port of 22) with a version called OpenSHH 6.6.1.
+
+With this information, the first thing I did was check out the webpage. Navigating to it reveals a pfsense login page - confirming this is a router. It could possible be open to brute force if it has a weak password. However, before bruteforcing it and going wild, maybe they didn't change the default credentials? Googling for pfsense default credentials reveals that pfsense:pfsense is the username and password. 
+
+![](/images/pfsensedefault.png)
+
 </p>
 </details>
 
