@@ -21,6 +21,33 @@ With this information we can start scanning each one:
 
 <details><summary>192.168.22.1</summary>
 <p>
+The IP of this machine could indicate that it is the router/default gateway of the network. Most routers either end in .1 or .254 for convenience. The first scan we run is a simple all ports scan outputting to a "normal" file.
+
+![](/images/"2 pfense allports.png")
+
+</p>
+</details>
+
+<details><summary>192.168.22.20</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>192.168.22.30</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>192.168.22.40</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>192.168.22.45</summary>
+<p>
 
 </p>
 </details>
