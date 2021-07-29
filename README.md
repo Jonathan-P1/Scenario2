@@ -23,7 +23,7 @@ With this information we can start scanning each one:
 <p>
 The IP of this machine could indicate that it is the router/default gateway of the network. Most routers either end in .1 or .254 for convenience. The first scan we run is a simple all ports scan outputting to a "normal" file.
 
-![](/images/"2 pfense allports.png")
+![](/images/2%20pfsense%20allports.png)
 
 </p>
 </details>
