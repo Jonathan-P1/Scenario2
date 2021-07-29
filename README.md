@@ -53,7 +53,7 @@ Finally, we need an error message so Hydra knows if the password hasn't worked. 
 
 Putting these parts all together in the Hydra command should look like the following:
 
-![](/images/pfsense%20bruteforce.png)
+![](/images/5%20-%20pfsense%20bruteforce.png)
 
 This breaks down into the following parts:
 
